@@ -16,7 +16,5 @@ public class UserDto implements MyDto{
 
     /* Username */
     private String username;
-
-    /* Password */
-    private String password;
+    
 }

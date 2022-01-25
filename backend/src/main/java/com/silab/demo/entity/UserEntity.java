@@ -8,8 +8,7 @@ import java.io.Serializable;
 @Table(name="users")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString @EqualsAndHashCode
 public class UserEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+    
     /* User ID */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

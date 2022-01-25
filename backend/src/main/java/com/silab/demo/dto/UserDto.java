@@ -2,10 +2,8 @@ package com.silab.demo.dto;
 
 import lombok.*;
 
-import java.io.Serializable;
-
 @Getter @Setter
-public class UserDto implements Serializable {
+public class UserDto implements MyDto{
 
     /* User ID */
     private Long id;

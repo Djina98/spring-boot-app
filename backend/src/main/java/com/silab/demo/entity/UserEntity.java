@@ -2,12 +2,11 @@ package com.silab.demo.entity;
 
 import lombok.*;
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name="users")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString @EqualsAndHashCode
-public class UserEntity implements Serializable {
+public class UserEntity implements MyEntity {
 
     /* User ID */
     @Id

@@ -16,5 +16,5 @@ public class UserDto implements MyDto{
 
     /* Username */
     private String username;
-    
+
 }

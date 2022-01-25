@@ -1,6 +1,6 @@
 package com.silab.demo.repository;
 
-import com.silab.demo.entity.UserEntity;
+import com.silab.demo.entity.impl.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

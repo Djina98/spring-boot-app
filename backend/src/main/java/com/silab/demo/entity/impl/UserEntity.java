@@ -1,5 +1,6 @@
-package com.silab.demo.entity;
+package com.silab.demo.entity.impl;
 
+import com.silab.demo.entity.MyEntity;
 import lombok.*;
 import javax.persistence.*;
 

@@ -21,7 +21,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/login")
+    @PostMapping
     public ResponseEntity<UserDto> login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
         try {
             UserDto userDto = userService.login(userLoginRequest.getUsername(), userLoginRequest.getPassword());

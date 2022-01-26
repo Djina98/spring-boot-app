@@ -3,10 +3,15 @@ package com.silab.demo.service.impl;
 import com.silab.demo.dto.impl.UserDto;
 import com.silab.demo.mapper.impl.UserMapper;
 import com.silab.demo.repository.UserRepository;
-import com.silab.demo.service.MyUserInterface;
+import com.silab.demo.service.MyUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class UserService implements MyUserInterface {
+import javax.transaction.Transactional;
+
+@Service
+@Transactional
+public class UserService implements MyUserService {
 
     private final UserRepository userRepository;
     private final UserMapper userMapper;

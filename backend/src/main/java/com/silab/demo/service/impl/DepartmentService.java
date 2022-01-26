@@ -47,15 +47,9 @@ public class DepartmentService implements MyService<DepartmentDto, Long> {
     }
 
     @Override
-    public DepartmentDto save(DepartmentDto dto) throws MyEntityAlreadyExists {
-        Optional<DepartmentEntity> departmentEntity = departmentRepository.findById(dto.getId());
-        if(departmentEntity.isPresent()) {
-            throw new MyEntityAlreadyExists("Department " + departmentEntity.get().getName() + " already exists in the system!");
-        }
-        else {
-            departmentRepository.save(departmentMapper.toEntity(dto));
-            return dto;
-        }
+    public DepartmentDto save(DepartmentDto dto){
+        departmentRepository.save(departmentMapper.toEntity(dto));
+        return dto;
     }
 
     @Override

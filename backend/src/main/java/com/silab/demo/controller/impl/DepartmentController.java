@@ -45,12 +45,8 @@ public class DepartmentController implements MyRestController<DepartmentDto, Lon
     @PostMapping
     @Override
     public ResponseEntity<Object> save(DepartmentDto dto) {
-        try {
-            departmentService.save(dto);
-            return ResponseEntity.status(HttpStatus.CREATED).body("Department " + dto.getName() + " is created!");
-        } catch (MyEntityAlreadyExists e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        }
+        departmentService.save(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Department " + dto.getName() + " is created!");
     }
 
     @DeleteMapping(path = "/{id}")

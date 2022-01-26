@@ -12,7 +12,7 @@ public interface MyService<DTO extends MyDto, ID> {
     /* CRUD */
     Optional<DTO> findById(ID id);
     List<DTO> getAll();
-    DTO save(DTO dto) throws MyEntityAlreadyExists;
+    DTO save(DTO dto);
     void delete(ID id) throws MyEntityDoesntExist;
     Optional<DTO> update(DTO dto) throws  MyEntityDoesntExist;
 

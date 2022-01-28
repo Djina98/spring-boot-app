@@ -6,7 +6,6 @@ import com.silab.demo.repository.UserRepository;
 import com.silab.demo.service.MyUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 
 @Service

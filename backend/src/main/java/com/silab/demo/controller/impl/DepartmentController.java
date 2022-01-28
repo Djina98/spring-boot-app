@@ -2,7 +2,6 @@ package com.silab.demo.controller.impl;
 
 import com.silab.demo.controller.MyRestController;
 import com.silab.demo.dto.impl.DepartmentDto;
-import com.silab.demo.exception.impl.MyEntityAlreadyExists;
 import com.silab.demo.exception.impl.MyEntityDoesntExist;
 import com.silab.demo.service.impl.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,14 +2,12 @@ package com.silab.demo.service.impl;
 
 import com.silab.demo.dto.impl.DepartmentDto;
 import com.silab.demo.entity.impl.DepartmentEntity;
-import com.silab.demo.exception.impl.MyEntityAlreadyExists;
 import com.silab.demo.exception.impl.MyEntityDoesntExist;
 import com.silab.demo.mapper.impl.DepartmentMapper;
 import com.silab.demo.repository.DepartmentRepository;
 import com.silab.demo.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -69,8 +67,7 @@ public class DepartmentService implements MyService<DepartmentDto, Long> {
             departmentRepository.save(departmentMapper.toEntity(dto));
             return Optional.of(dto);
         }
-        else {
+        else
             throw new MyEntityDoesntExist("Department " + dto.getName() + " doesn't exist!");
-        }
     }
 }

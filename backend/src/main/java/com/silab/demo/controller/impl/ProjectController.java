@@ -42,8 +42,7 @@ public class ProjectController implements MyRestController<ProjectDto, Long> {
     @PostMapping
     @Override
     public ResponseEntity<Object> save(ProjectDto dto) {
-        projectService.save(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Project " + dto.getName() + " is created!");
+        return ResponseEntity.status(HttpStatus.CREATED).body(projectService.save(dto));
     }
 
     @DeleteMapping(path = "/{id}")

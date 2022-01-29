@@ -2,6 +2,7 @@ package com.silab.demo.service.impl;
 
 import com.silab.demo.dto.impl.DepartmentDto;
 import com.silab.demo.entity.impl.DepartmentEntity;
+import com.silab.demo.exception.impl.MyEntityAlreadyExists;
 import com.silab.demo.exception.impl.MyEntityDoesntExist;
 import com.silab.demo.mapper.impl.DepartmentMapper;
 import com.silab.demo.repository.DepartmentRepository;

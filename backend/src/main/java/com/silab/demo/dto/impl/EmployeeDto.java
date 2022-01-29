@@ -11,10 +11,10 @@ public class EmployeeDto implements MyDto {
     /* Employee ID */
     private Long id;
 
-    /* Employee first name */
+    /* Employee firstname */
     private String firstName;
 
-    /* Employee last name */
+    /* Employee lastname */
     private String lastName;
 
     /* Employee job name */

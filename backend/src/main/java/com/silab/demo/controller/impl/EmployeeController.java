@@ -42,7 +42,8 @@ public class EmployeeController implements MyRestController<EmployeeDto, Long> {
     @PostMapping
     @Override
     public ResponseEntity<Object> save(EmployeeDto dto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(employeeService.save(dto));
+        employeeService.save(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Employee " + dto.getFirstName() + " " + dto.getLastName() + " is created!");
     }
 
     @DeleteMapping(path = "/{id}")

@@ -43,7 +43,8 @@ public class DepartmentController implements MyRestController<DepartmentDto, Lon
     @PostMapping
     @Override
     public ResponseEntity<Object> save(DepartmentDto dto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(departmentService.save(dto));
+        departmentService.save(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Department " + dto.getName() + " is created!");
     }
 
     @DeleteMapping(path = "/{id}")
